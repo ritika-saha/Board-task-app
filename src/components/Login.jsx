@@ -16,8 +16,11 @@ background-color: black;
 `
 const Right=styled.div`
 display: flex;
+align-items: center;
+justify-content: center;
 flex: 59.17%;
 height: 100%;
+background-color: #F5F5F5;
 `
 
 const Title=styled.div`
@@ -38,6 +41,7 @@ const Title=styled.div`
     margin: 20px;
   }
 `
+
 const Login = () => {
   return (
     <Container>
@@ -45,7 +49,18 @@ const Login = () => {
             <Title>Board.</Title>
         </Left>
         <Right>
+          <CardContain>
+          <Signin>Sign In</Signin>
+          <SignText>Sign in to your account</SignText>
+          <Account>
+            <Google></Google>
+            <Apple></Apple>
+          </Account>
+          <Card>
 
+          </Card>
+          <Register></Register>
+          </CardContain>
         </Right>
     </Container>
   )
