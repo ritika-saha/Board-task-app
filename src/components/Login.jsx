@@ -60,6 +60,12 @@ const SignText=styled.div`
   font-family: 'Lato', sans-serif;
   margin-bottom: 15px;
   color: ${props=>props.yes?'#346BD4':'black'};
+  
+`
+
+const SignText1=styled.div`
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 15px;
   color: ${prop=>prop.grey?'#858585':'black'};
 `
 const Account=styled.div`
@@ -152,6 +158,7 @@ font-style: normal;
 font-weight: 700;
 font-size: 16px;
 cursor: pointer;
+border: none;
 `
 const Register=styled.div`
 display: flex;
@@ -183,7 +190,7 @@ const Login = () => {
               <SignInButton>Sign In</SignInButton>
           </Card>
           <Register>
-            <SignText grey>Don't have an account ? </SignText>
+            <SignText1 grey>Don't have an account ? </SignText1>
             <SignText yes> Register here</SignText>
           </Register>
           </CardContain>
