@@ -2,6 +2,8 @@ import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
 import { faChartPie, faSearch ,faTags, faCalendarWeek, faCircleUser ,faGear, faBell,  faUser, faMoneyBillTransfer, faThumbsUp, faUsers } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import styled from 'styled-components'
+import LineChart from './LineChart';
+
 
 const Container=styled.div`
 background-color: #DDDDDD;
@@ -94,7 +96,7 @@ height: 90vh;
 `
 
 const Nav=styled.div`
-  height: 10vh;
+  height: 8vh;
   width: 100%;
  // border: 1px solid blue;
   display: flex;
@@ -137,11 +139,12 @@ const StatCard=styled.div`
   height: 120px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 `
 
 const Card=styled.div`
-width: 150px;
-height: 60px;
+width: 140px;
+height: 55px;
 background-color: ${props=>props.color};
 border-radius: 20px;
 padding: 30px;
@@ -158,7 +161,16 @@ font-size: ${props=>props.size};
 font-weight: ${props=>props.weight};
 `
 
+const LineGraph=styled.div`
+width: 100%;
+height: 359px;
+`
+
+
+  
+
 const Dashboard = () => {
+  
   return (
     <Container>
       <Left>
@@ -216,6 +228,9 @@ const Dashboard = () => {
           </Card>
 
         </StatCard>
+        <LineGraph>
+        <LineChart />
+        </LineGraph>
       </Right>
 
     </Container>
