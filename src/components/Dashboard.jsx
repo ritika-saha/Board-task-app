@@ -1,5 +1,5 @@
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
-import { faChartPie, faSearch ,faTags, faCalendarWeek, faCircleUser ,faGear, faBell, faBellConcierge, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faChartPie, faSearch ,faTags, faCalendarWeek, faCircleUser ,faGear, faBell,  faUser, faMoneyBillTransfer, faThumbsUp, faUsers } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -90,14 +90,13 @@ height: 90vh;
   background-color: #DDDDDD;
   border: 1px solid green;
   border-radius: 29px;
- 
-  
+
 `
 
 const Nav=styled.div`
   height: 10vh;
   width: 100%;
-  border: 1px solid blue;
+ // border: 1px solid blue;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -132,6 +131,33 @@ const Input=styled.input`
   border-radius: 8px;
 `
 
+const StatCard=styled.div`
+  width: 100%;
+ // border: 1px solid red;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+`
+
+const Card=styled.div`
+width: 150px;
+height: 60px;
+background-color: ${props=>props.color};
+border-radius: 20px;
+padding: 30px;
+display: flex;
+flex-direction: column;
+`
+
+const CardTitle=styled.div`
+display: flex;
+align-items: start;
+float: left;
+font-family: ${props=>props.font};
+font-size: ${props=>props.size};
+font-weight: ${props=>props.weight};
+`
+
 const Dashboard = () => {
   return (
     <Container>
@@ -162,6 +188,34 @@ const Dashboard = () => {
         <FontAwesomeIcon icon={faUser} style={{marginLeft:'20px'}} />
           </Creds>
         </Nav>
+
+        <StatCard>
+
+          <Card color={'#DDEFE0'}>
+          <div><FontAwesomeIcon icon={faMoneyBillTransfer} style={{float:'right', width:'26px', height:'26px'}} /></div>
+          <CardTitle font='lato' size='14px' weight='400'>Total Revenues</CardTitle>
+          <CardTitle font='open sans' size='24px' weight='700'>$2,129,430</CardTitle>
+          </Card>
+
+          <Card color={'#F4ECDD'}>
+          <div><FontAwesomeIcon icon={faTags} style={{float:'right', width:'26px', height:'26px'}} /></div>
+          <CardTitle font='lato' size='14px' weight='400'>Total Transactions</CardTitle>
+          <CardTitle font='open sans' size='24px' weight='700'>1,520</CardTitle>
+          </Card>
+
+          <Card color={'#EFDADA'}>
+          <div><FontAwesomeIcon icon={faThumbsUp} style={{float:'right', width:'26px', height:'26px'}} /></div>
+          <CardTitle font='lato' size='14px' weight='400'>Total Likes</CardTitle>
+          <CardTitle font='open sans' size='24px' weight='700'>9,721</CardTitle>
+          </Card>
+
+          <Card color={'#DEE0EF'}>
+          <div><FontAwesomeIcon icon={faUsers} style={{float:'right', width:'26px', height:'26px'}} /></div>
+          <CardTitle font='lato' size='14px' weight='400'>Total Users</CardTitle>
+          <CardTitle font='open sans' size='24px' weight='700'>892</CardTitle>
+          </Card>
+
+        </StatCard>
       </Right>
 
     </Container>
