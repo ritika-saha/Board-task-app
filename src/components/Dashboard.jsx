@@ -1,5 +1,5 @@
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
-import { faChartPie, faTags, faCalendarWeek, faCircleUser ,faGear } from '@fortawesome/free-solid-svg-icons'
+import { faChartPie, faSearch ,faTags, faCalendarWeek, faCircleUser ,faGear, faBell, faBellConcierge, faUser } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -22,12 +22,12 @@ justify-content: space-between;
 `
 
 const Title=styled.div`
-  color: white;
-  font-weight: 700;
+  color: ${props=>props.black?'black':'white'};
+  font-weight: ${props=>props.weight?'600':700};
   font-family: 'Montserrat';
   display: flex;
   flex: 1;
-  font-size: 2.25rem;
+  font-size: ${props=>props.size?'1.5rem':'2.25rem'};
 
   justify-content: center;
   align-items: center;
@@ -90,6 +90,46 @@ height: 90vh;
   background-color: #DDDDDD;
   border: 1px solid green;
   border-radius: 29px;
+ 
+  
+`
+
+const Nav=styled.div`
+  height: 10vh;
+  width: 100%;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 7;
+  border-radius: 29px;
+`
+
+const NavTit=styled.div`
+ 
+`
+const Creds=styled.div`
+ //background-color: green;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+`
+
+const SearchContainer=styled.div`
+//border: 1px solid red;
+display: flex;
+  align-items: center;
+ padding: 2px;
+ background-color: white;
+ border-radius: 8px;
+ border: none;
+`
+const Input=styled.input`
+  border: none;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 8px;
 `
 
 const Dashboard = () => {
@@ -111,7 +151,17 @@ const Dashboard = () => {
       </Left>
 
       <Right>
-
+        <Nav>
+          <NavTit><Title black size weight>Dashboard</Title></NavTit>
+          <Creds>
+          <SearchContainer>
+         <Input placeholder='Search...'/>
+         <FontAwesomeIcon icon={faSearch} style={{color:'grey'}} />
+        </SearchContainer>
+        <FontAwesomeIcon icon={faBell} style={{marginLeft:'20px'}} />
+        <FontAwesomeIcon icon={faUser} style={{marginLeft:'20px'}} />
+          </Creds>
+        </Nav>
       </Right>
 
     </Container>
