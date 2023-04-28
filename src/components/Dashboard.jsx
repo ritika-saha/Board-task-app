@@ -3,6 +3,7 @@ import { faChartPie, faSearch ,faTags, faCalendarWeek, faCircleUser ,faGear, faB
 import React from 'react'
 import styled from 'styled-components'
 import LineChart from './LineChart';
+import PieChart from './PieChart';
 
 
 const Container=styled.div`
@@ -90,13 +91,13 @@ const Right=styled.div`
 width: 900px;
 height: 90vh;
   background-color: #DDDDDD;
-  border: 1px solid green;
+  //border: 1px solid green;
   border-radius: 29px;
 
 `
 
 const Nav=styled.div`
-  height: 8vh;
+  height: 6.7vh;
   width: 100%;
  // border: 1px solid blue;
   display: flex;
@@ -159,15 +160,80 @@ float: left;
 font-family: ${props=>props.font};
 font-size: ${props=>props.size};
 font-weight: ${props=>props.weight};
+color: ${props=>props.color?props.color:'black'};
 `
 
 const LineGraph=styled.div`
 width: 100%;
-height: 359px;
+height: 230px;
+//border: 1px solid green;
+background-color: white;
+border-radius: 29px;
 `
 
+const Bottom=styled.div`
+  width: 100%;
+  //border: 1px solid red;
+  height: 145px;
+  border-radius: 29px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+`
 
-  
+  const Pie=styled.div`
+    background-color: white;
+    border-radius: 29px;
+    width: 50%;
+    margin-right: 10px;
+  `
+
+  const Schedule=styled.div`
+    background-color: white;
+    border-radius: 29px;
+    width: 50%;
+    height: 100%;
+    margin-left: 10px;
+  `
+
+  const ScheduleTit=styled.div`
+  //border: 1px solid green;
+  height: 1%;
+  width: 90.6%;
+  margin-right: 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  `
+
+  const ScheduleCard=styled.div`
+ // border: 1px solid red;
+  margin-top: 2px;
+  width: 75%;
+  height: 40px;
+  margin-left: 10px;
+  //padding: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  `
+  const ScheduleCardLine=styled.div`
+  flex: 0.13;
+  //border: 1px solid green;
+  height: 100%;
+  background-color: ${props=>props.bgcolor};
+  width: 100%;
+  margin-right: 10px;
+  `
+  const ScheduleCardDetail=styled.div`
+  flex: 9.97;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //align-items: center;
+  align-items: start;
+  float: left;
+  `
 
 const Dashboard = () => {
   
@@ -231,6 +297,34 @@ const Dashboard = () => {
         <LineGraph>
         <LineChart />
         </LineGraph>
+        <Bottom>
+          <Pie><PieChart /></Pie>
+          <Schedule>
+            <ScheduleTit ><CardTitle font='Montserrat' weight='700' size='14px' color='black'>Todays Schedule</CardTitle>
+            <CardTitle font='Montserrat' weight='500' size='12px' color='#858585'>See All ></CardTitle>
+            </ScheduleTit>
+
+            <ScheduleCard>
+              <ScheduleCardLine bgcolor='lightgreen'></ScheduleCardLine>
+              <ScheduleCardDetail>
+              <CardTitle font='Lato' weight='700' size='14px' color='#666666'>Meeting with suppliers from Kuta Bali</CardTitle>
+              <CardTitle font='Lato' weight='400' size='10px' color='#858585'>14.00-15.00 </CardTitle>
+              <CardTitle font='Lato' weight='400' size='9px' color='#858585'>at Sunset Road, Kuta, Bali </CardTitle>
+              </ScheduleCardDetail>
+            </ScheduleCard>
+
+            
+            <ScheduleCard>
+              <ScheduleCardLine bgcolor='#6972C3'></ScheduleCardLine>
+              <ScheduleCardDetail>
+              <CardTitle font='Lato' weight='700' size='14px' color='#666666'>Check operation at Giga Factory 1</CardTitle>
+              <CardTitle font='Lato' weight='400' size='10px' color='#858585'>18.00-20.00</CardTitle>
+              <CardTitle font='Lato' weight='400' size='9px' color='#858585'>at Central Jakarta </CardTitle>
+              </ScheduleCardDetail>
+            </ScheduleCard>
+
+          </Schedule>
+        </Bottom>
       </Right>
 
     </Container>

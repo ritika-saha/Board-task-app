@@ -8,7 +8,9 @@ class LineChart extends Component {
     this.state = {
       options: {
         chart: {
-          id: 'line-chart'
+          id: 'line-chart',
+          //background: '#ffffff',
+         // borderRadius: '8px',
         },
         stroke: {
             curve: 'smooth' // set the strokeCurve option to "smooth"
