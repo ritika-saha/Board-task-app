@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import {getAuth,GoogleAuthProvider} from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDQxpkSuo4jR-sZ2dPIWLgJnZ2dSsorl0k",
-    authDomain: "task-app-659c6.firebaseapp.com",
-    projectId: "task-app-659c6",
-    storageBucket: "task-app-659c6.appspot.com",
-    messagingSenderId: "133883107485",
-    appId: "1:133883107485:web:03725eeba15e37579a5c74",
-    measurementId: "G-B4CV4CPQ3F"
+    apiKey: "AIzaSyAt6VOnQSzKhDlyM7FJqIhBtB85PFutRd4",
+  authDomain: "dashboard-task-app.firebaseapp.com",
+  projectId: "dashboard-task-app",
+  storageBucket: "dashboard-task-app.appspot.com",
+  messagingSenderId: "890090837500",
+  appId: "1:890090837500:web:2c7fff166495683b97ce79",
+  measurementId: "G-80WR0SLR0F"
 };
 
 // Initialize Firebase
