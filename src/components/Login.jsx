@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { auth,provider } from './config'
+import {signInWithPopup} from "firebase/auth";
+import Dashboard from './Dashboard';
 
 const Container=styled.div`
 display:flex;
@@ -168,8 +171,22 @@ margin: 1px solid red;
 width: 100%;
 `
 const Login = () => {
-  return (
+  const [value,setValue]=useState('')
+  const handleClick=()=>{
+      signInWithPopup(auth,provider).then((data)=>{
+        setValue(data.user.email)
+        localStorage.setItem("email",data.user.email)
+      })
+  }
+
+  useEffect(()=>{
+    setValue(localStorage.getItem('email'))
+  },[value])
+
+  return (<>
+    {value? <Dashboard /> :<>
     <Container>
+    
         <Left>
             <Title>Board.</Title>
         </Left>
@@ -178,7 +195,8 @@ const Login = () => {
           <Signin>Sign In</Signin>
           <SignText>Sign in to your account</SignText>
           <Account>
-            <Google> <Image src="https://s4827.pcdn.co/wp-content/uploads/2018/04/Google-logo-2015-G-icon.png"/>Sign in with Google </Google>
+           
+            <Google onClick={handleClick}> <Image src="https://s4827.pcdn.co/wp-content/uploads/2018/04/Google-logo-2015-G-icon.png"/>Sign in with Google </Google>
             <Apple><Image2 src="apple 1.png" width={"21.5px"} height={"24px"} />Sign in with Apple</Apple>
           </Account>
           <Card>
@@ -195,7 +213,11 @@ const Login = () => {
           </Register>
           </CardContain>
         </Right>
+       
     </Container>
+     </>
+    }
+    </>
   )
 }
 
