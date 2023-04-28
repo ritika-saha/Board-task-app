@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Board-task-app/static/css/main.95ea8777.css",
+    "main.js": "/Board-task-app/static/js/main.facebb68.js",
+    "static/js/787.a8b3d52c.chunk.js": "/Board-task-app/static/js/787.a8b3d52c.chunk.js",
+    "index.html": "/Board-task-app/index.html",
+    "main.95ea8777.css.map": "/Board-task-app/static/css/main.95ea8777.css.map",
+    "main.facebb68.js.map": "/Board-task-app/static/js/main.facebb68.js.map",
+    "787.a8b3d52c.chunk.js.map": "/Board-task-app/static/js/787.a8b3d52c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95ea8777.css",
+    "static/js/main.facebb68.js"
+  ]
+}
