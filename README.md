@@ -1,4 +1,17 @@
-<<<<<<< HEAD
+# Board App 🔊
+- built with react js. 🛠
+- User authentcation using Firebase Google Login authentication. 🔐
+
+# Preview of the 2 pages
+
+### Login page
+<br></br>
+<img width="960" alt="loginpage" src="https://user-images.githubusercontent.com/72276256/235284898-bfa46b58-c080-410c-a762-a69ac48070dc.png">
+### Dashboard page
+<br></br>
+<img width="960" alt="dashboardpage" src="https://user-images.githubusercontent.com/72276256/235284904-17f13c08-185a-4dbb-a7ec-0acb8f90b919.png">
+
+<br></br>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
