@@ -1,6 +1,6 @@
 # Board App 🔊
 - built with react js. 🛠
-- User authentcation using Firebase Google Login authentication. 🔐
+- User authentcation using Firebase's Firebase-auth Google Login authentication. 🔐
 
 # Preview of the 2 pages
 
